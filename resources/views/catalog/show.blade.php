@@ -20,7 +20,8 @@
                     <a href="#" class="btn btn-primary btn-sm">Alquilar película</a>
                 @endif
             </p>
-            <a href="{{ url('/catalog/edit/' . $pelicula->id) }}" class="btn btn-warning btn-sm">Editar película</a>
+            <a href="{{ route('catalog.edit', $pelicula->id) }}" class="btn btn-warning btn-sm">Editar película</a>
+
             <a href="{{ url('/catalog') }}" class="btn btn-default btn-sm">Volver al listado</a>
         </div>
     </div>

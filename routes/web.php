@@ -23,5 +23,10 @@ Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog.index
 Route::get('/catalog/{id}', [CatalogController::class, 'show'])->name('catalog.show');
 Route::get('/catalog.create', [CatalogController::class, 'create'])->name('catalog.create');
 Route::post('/catalog', [CatalogController::class, 'store'])->name('catalog.store');
+// Ruta para editar un elemento del catálogo
+Route::get('/catalog/{id}/edit', [CatalogController::class, 'edit'])->name('catalog.edit');
+
+// Ruta para actualizar un elemento del catálogo
+Route::put('/catalog/{id}', [CatalogController::class, 'update'])->name('catalog.update');
 
 
